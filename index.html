@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme PPL - Loane</title>
+    <style>
+        :root {
+            --primary-color: #3498db; /* Bleu sportif */
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --text-secondary: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        h1 { margin: 0; font-size: 2rem; letter-spacing: 1px; }
+        h2 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; margin-top: 2rem;}
+        h3 { color: white; margin-bottom: 0.2rem; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Section Infos Générales */
+        .info-box {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .info-item { margin-bottom: 0.8rem; }
+        .info-label { font-weight: bold; color: white; }
+
+        /* Cartes Exercices */
+        .session-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .targets {
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .exercise {
+            display: flex;
+            flex-direction: column; /* Mobile first: image en haut, texte en bas */
+            border-bottom: 1px solid #333;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .exercise:last-child { border-bottom: none; margin-bottom: 0; }
+
+        .exercise-img {
+            width: 100%;
+            height: 200px;
+            background-color: #333;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 0.8rem;
+        }
+
+        .exercise-content p { margin: 0.2rem 0; color: var(--text-secondary); }
+        .exercise-content strong { color: white; font-size: 1.1rem; display: block; margin-bottom: 0.3rem;}
+
+        /* Note spéciale pour les jambes */
+        .note {
+            font-style: italic;
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 1rem;
+            border: 1px dashed #555;
+            border-radius: 8px;
+        }
+
+        /* Responsive Desktop */
+        @media (min-width: 768px) {
+            .exercise {
+                flex-direction: row;
+                align-items: center;
+            }
+            .exercise-img {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 0;
+                margin-right: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Programme PPL</h1>
+        <p>Push / Pull / Legs</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="info-box">
+            <div class="info-item">
+                <span class="info-label">📅 Fréquence :</span> 3 séances par semaine (ex: Lundi / Mercredi / Vendredi)
+            </div>
+            <div class="info-item">
+                <span class="info-label">🏋️ Volume :</span> 4 séries de 12 répétitions pour chaque exercice.
+            </div>
+            <div class="info-item">
+                <span class="info-label">⏱️ Repos :</span> Minimum 2 minutes 30 de repos entre chaque série.
+            </div>
+            <div class="info-item">
+                <span class="info-label">💡 Technique :</span> Privilégie toujours la qualité du mouvement au poids. N'hésite pas à te filmer et à m'envoyer si tu as un doute.
+            </div>
+        </section>
+
+        <section class="session-card" id="push">
+            <h2>SÉANCE 1 : PUSH</h2>
+            <div class="targets">Cible : Pectoraux, Épaules, Triceps</div>
+
+            <article class="exercise">
+                <img src="https://placehold.co/300x200/333/FFF?text=Chest+Press" alt="Chest Press" class="exercise-img">
+                <div class="exercise-content">
+                    <strong>Chest Press (Presse Pectorale)</strong>
+                    <p>Mouvement de base pour la poitrine.</p>
+                </div>
+            </article>
+
+            <article class="exercise">
+                <img src="https://placehold.co/300x200/333/FFF?text=Butterfly" alt="Butterfly" class="exercise-img">
+                <div class="exercise-content">
+                    <strong>Butterfly</strong>
+                    <p>Cible le grand pectoral et l'avant des épaules.</p>
+                </div>
+            </article>
+
+            <article class="exercise">
+                <img src="https://placehold.co/300x200/333/FFF?text=Elevations+Laterales" alt="Élévations Latérales" class="exercise-img">
+                <div class="exercise-content">
+                    <strong>Élévations Latérales à la Poulie</strong>
+                    <p>Pour le galbe de l'épaule.</p>
+                </div>
+            </article>
+
+            <article class="exercise">
+                <img src="https://placehold.co/300x200/333/FFF?text=Triceps+Corde" alt="Extension Triceps" class="exercise-img">
+                <div class="exercise-content">
+                    <strong>Extension Triceps à la Corde (Poulie Haute)</strong>
+                    <p>Isolation pour l'arrière des bras.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="session-card" id="pull">
+            <h2>SÉANCE 2 : PULL</h2>
+            <div class="targets">Cible : Dos, Arrière d'épaules, Biceps</div>
+
+            <article class="exercise">
+                <img src="https://placehold.co/300x200/333/FFF?text=Lat+Pulldown" alt="Tirage Vertical" class="exercise-img">
+                <div class="exercise-content">
+                    <strong>Tirage Vertical (Lat Pulldown)</strong>
+                    <p>Pour la largeur du dos.</p>
+                </div>
+            </article>
+
+            <article class="exercise">
+                <img src="https://placehold.co/300x200/333/FFF?text=Rowing+Assis" alt="Tirage Horizontal" class="exercise-img">
+                <div class="exercise-content">
+                    <strong>Tirage Horizontal (Rowing assis)</strong>
+                    <p>Pour l'épaisseur du dos.</p>
+                </div>
+            </article>
+
+            <article class="exercise">
+                <img src="https://placehold.co/300x200/333/FFF?text=Facepull" alt="Oiseau Poulie" class="exercise-img">
+                <div class="exercise-content">
+                    <strong>Oiseau à la Poulie ou Facepull</strong>
+                    <p>Pour l'arrière des épaules et la posture.</p>
+                </div>
+            </article>
+
+            <article class="exercise">
+                <img src="https://placehold.co/300x200/333/FFF?text=Curl+Biceps" alt="Curl Biceps" class="exercise-img">
+                <div class="exercise-content">
+                    <strong>Curl Biceps (Poulie ou Pupitre)</strong>
+                    <p>Pour les bras.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="session-card" id="legs">
+            <h2>SÉANCE 3 : LEGS</h2>
+            <div class="note">
+                "Je te laisse gérer cette partie, mais si tu veux que je te rédige un exemple de séance aussi dis moi je le ferai."
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
